@@ -156,6 +156,7 @@ project_grid = html.Div(
 layout = html.Div(
     id='project_container',
     children=[
+        html.Link(rel='stylesheet', href='assets/css/projects.css'),
         project_carousel,
         html.Hr(style={'color': 'white', 'width': '100%'}),
         project_grid,

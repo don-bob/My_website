@@ -1,6 +1,10 @@
 from dash import Dash, html, page_container
 
-app = Dash(__name__, use_pages=True, suppress_callback_exceptions=True)
+app = Dash(
+    __name__, use_pages=True, 
+    suppress_callback_exceptions=True,
+    assets_ignore=r'.*\.css'
+)
 
 server = app.server
 

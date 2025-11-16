@@ -151,7 +151,8 @@
 
 /* 🎚️ Scrollbar moderno y minimalista */
 ::-webkit-scrollbar {
-  height: 6px;                 /* grosor del scroll horizontal */
+  height: 6px; 
+  width: 6px;                /* grosor del scroll horizontal */
 }
 
 ::-webkit-scrollbar-track {

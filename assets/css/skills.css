@@ -18,10 +18,11 @@
     height: 250px;
     width: 600px;
     place-items: center;
+    border-top: 1px solid white;
 }
 .education_col1{
     display: grid;
-    grid-template-rows: 27% 60% 13% 10%;
+    grid-template-rows: 17% 67% 11% 5%;
     width: 100%;
     height: 100%;
     place-items: center;
@@ -35,8 +36,42 @@
 .education_col2{
     display: grid;
     grid-template-rows: 20% 80%;
-    gap: 20px;
+    gap: 5px;
     width: 100%;
     height: 100%;
 }
+
+.education_knowledge_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+}
 /* --------------------------------------------------------------------------------------------------------------------------- */
+/* 🎚️ Scrollbar moderno y minimalista */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;                 /* grosor del scroll horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f519;         /* color del fondo de la pista */
+  border-radius: 10px;         /* bordes suaves */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(173, 171, 171, 0.447); /* color con degradado sutil */
+  border-radius: 10px;         /* bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(245, 218, 218); /* cambio de color al pasar el mouse */
+}
+
+/* 🚫 Eliminar flechas de desplazamiento */
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}

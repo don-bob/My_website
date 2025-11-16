@@ -10,7 +10,15 @@ data_skills = {
             "img": "universidad_del_valle.png",
             "title": "Estadistica", 
             "years": [2020, 2023],
-            "knowledge": ['estadistica descritiva', 'estadistica inferencial', 'calculo', 'algebra', 'probabilidad']
+            "knowledge": [
+                'Matematica fundamental', 'calculo 1', 'calculo 2', 'calculo 3', 
+                'algebra lineal', 'algebra lineal avanzada', 
+                'calculo de probabilidades 1', 'calculo de probabilidades 2',
+                'algoritmia y programacion',
+                'procesamiento de datos', 'gestion de base de datos', 
+                'estadistica descriptiva', 'estadistica matematica', 'estadistica aplicada', 'estadistica inferencial', 'estadistica bayesiana'
+                'economia',
+            ]
         },        
         "platzi" : {
             "img": "platzi.png",
@@ -36,7 +44,6 @@ education = html.Div(
                     'Education',
                     className='category_skills'
                 ),
-                html.Hr()
             ]
         ),
         
@@ -65,15 +72,21 @@ education = html.Div(
                                     ' - ',
                                     data_skills['education'][education_element]['years'][1]
                                 ],
-                                style={'font-size': '14px'}
+                                style={'font-size': '13px'}
                             )
                         ]
                     ),
                     html.Div(
                         className='education_col2',
                         children=[
-                            html.P(
-                                'Conocimientos adquiridos'
+                            html.Div(
+                                style={'width': '100%', 'height': '100%', 'display': 'flex', 'justify-content': 'center', 'align-items': 'center',},
+                                children=[
+                                    html.P(
+                                        'Conocimientos adquiridos: ', 
+                                        style={'font-size': '18px'}
+                                    ),
+                                ]
                             ),
                             html.Div(
                                 className='education_knowledge_container',

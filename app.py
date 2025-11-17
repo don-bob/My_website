@@ -12,8 +12,8 @@ from menu import * # Se importa este modulo despues de haber activador use_pages
 app.layout = html.Div(
     id='main',
     children=[
-    menu,
-    page_container,
+        menu,
+        page_container,
     ]
 )
 

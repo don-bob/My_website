@@ -8,25 +8,56 @@ data_skills = {
     "education": {
         "universidad del valle" : {
             "img": "universidad_del_valle.png",
-            "title": "Estadistica", 
-            "years": [2020, 2023],
+            "title": "statistics", 
+            "years": ['2020', '2023'],
             "knowledge": [
-                'Matematica fundamental', 'calculo 1', 'calculo 2', 'calculo 3', 
-                'algebra lineal', 'algebra lineal avanzada', 
-                'calculo de probabilidades 1', 'calculo de probabilidades 2',
-                'algoritmia y programacion',
-                'procesamiento de datos', 'gestion de base de datos', 
-                'estadistica descriptiva', 'estadistica matematica', 'estadistica aplicada', 'estadistica inferencial', 'estadistica bayesiana'
-                'economia',
+                "Fundamental Mathematics", "Calculus 1", "Calculus 2", "Calculus 3",
+                "Linear Algebra", "Advanced Linear Algebra",
+                "Probability Calculus 1", "Probability Calculus 2",
+                "Algorithms and Programming", "Python for statistics",
+                "Data Processing", "Database Management",
+                "Descriptive Statistics", "Mathematical Statistics",
+                "Applied Statistics", "Inferential Statistics", "Bayesian Statistics",
+                "Economics for academic purposes",
+                "English for academic purposes 1", "English for academic purposes 2"
             ]
         },        
         "platzi" : {
             "img": "platzi.png",
             "title": "Ciencia de datos", 
-            "years": [2023, 2024],
-            "knowledge": ['programacion']
+            "years": ['2023', '2024'],
+            "knowledge": [
+                'Introducción a la Terminal y Línea de Comandos', 
+                'Profesional de Git y GitHub',
+                'Fundamentos de Python', 
+                'Python: Comprehensions, Funciones y Manejo de Errores', 
+                'Entorno de Trabajo para Ciencia de Datos con Jupyter Notebooks y Anaconda',
+                'Análisis de Negocios para Ciencia de Datos', 
+                'Principios de Visualización de Datos para Business Intelligence ', 
+                'Business Intelligence: Utilidad y Áreas de Oportunidad',
+                'PostgreSQL Aplicado a Ciencia de Datos'
+            ]
         },
-        
+        "Autodidacta" : {
+            "img": "self-taught.png",
+            "title": "Ciencia de datos", 
+            "years": ['2023', 'actualy'],
+            "knowledge": [
+                'Object-Oriented Programming (OOP)',
+                'Web Task Automation with Selenium',
+                'Data Extraction (Web Scraping)',
+                'Virtual Machine Administration in Linux',
+                'Fundamentals of Machine Learning',
+                'Data Visualization with Python',
+                'Interactive Dashboards with Dash and Plotly',
+                'Data Manipulation and Analysis with Pandas',
+                'Numerical Processing with NumPy',
+                'Statistical Correlation Analysis',
+                'Web Development: HTML5, CSS3, and JavaScript',
+                'Microsoft Excel (Data Management and Analysis)',
+                'English'
+            ]
+        },
     },
     "tools": {}
 }
@@ -63,14 +94,14 @@ education = html.Div(
                                 className='education_img'
                             ),
                             html.P(
-                                data_skills["education"][education_element]['title'],
+                                data_skills["education"][education_element]['title'].title(),
                                 style={'font-size': '18px'}
                             ),
                             html.P(
                                 [
                                     data_skills['education'][education_element]['years'][0],
                                     ' - ',
-                                    data_skills['education'][education_element]['years'][1]
+                                    data_skills['education'][education_element]['years'][1].title()
                                 ],
                                 style={'font-size': '13px'}
                             )
@@ -83,7 +114,7 @@ education = html.Div(
                                 style={'width': '100%', 'height': '100%', 'display': 'flex', 'justify-content': 'center', 'align-items': 'center',},
                                 children=[
                                     html.P(
-                                        'Conocimientos adquiridos: ', 
+                                        'acquired knowledge: '.title(), 
                                         style={'font-size': '18px'}
                                     ),
                                 ]
@@ -92,7 +123,8 @@ education = html.Div(
                                 className='education_knowledge_container',
                                 children=[
                                     html.P(
-                                        children='- ' + knowledge.title()
+                                        children='•  ' + knowledge.title(),
+                                        style={ 'white-space': 'nowrap'}
                                     )
                                     for knowledge in data_skills['education'][education_element]['knowledge']
                                 ]
@@ -103,7 +135,6 @@ education = html.Div(
             )
             for education_element in data_skills["education"]
         ],
-        
     ]
 )
 

@@ -2,6 +2,7 @@
     text-align: center;
     font-size: 25px;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 #education_container{
@@ -9,14 +10,14 @@
     background: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
 }
 .education_element{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     height: 250px;
-    width: 600px;
+    width: 700px;
     place-items: center;
     border-top: 1px solid white;
 }
@@ -28,8 +29,8 @@
     place-items: center;
 }
 .education_img{
-    height: 100%;
-    width: 130px;
+    height: 165px;
+    width: 150px;
     border-radius: 5px;
 }
 

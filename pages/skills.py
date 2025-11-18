@@ -42,7 +42,7 @@ data_education= {
     "Autodidacta" : {
         "img": "self-taught.png",
         "title": "Ciencia de datos", 
-        "years": ['2023', 'actualy'],
+        "years": ['2023', 'present'],
         "knowledge": [
             'Object-Oriented Programming (OOP)',
             'Web Task Automation with Selenium',
@@ -61,101 +61,157 @@ data_education= {
     }
 }
 
-education = html.Div(
-    id='education_container',
-    children=[
-        html.P(
-            'Education',
-            className='category_skills'
-        ),
-        html.Div(
-            style={'display': 'flex', 'flex-direction': 'column', 'gap': '40px'},
-            children=[
-                html.Div(
-                    className='education_element',
-                    children=[
-                        html.Div(
-                            className='education_col1',
-                            children=[
-                                html.P(
-                                    education_element.title(),
-                                    style={'font-size': '22px'}
-                                ),
-                                html.Img(
-                                    src = img_skills + data_education[education_element]["img"],
-                                    className='education_img'
-                                ),
-                                html.P(
-                                    data_education[education_element]['title'].title(),
-                                    style={'font-size': '18px'}
-                                ),
-                                html.P(
-                                    [
-                                        data_education[education_element]['years'][0],
-                                        ' - ',
-                                        data_education[education_element]['years'][1].title()
-                                    ],
-                                    style={'font-size': '13px'}
-                                )
-                            ]
-                        ),
-                        html.Div(
-                            className='education_col2',
-                            children=[
-                                html.Div(
-                                    style={'width': '100%', 'height': '100%', 'display': 'flex', 'justify-content': 'center', 'align-items': 'center',},
-                                    children=[
-                                        html.P(
-                                            'acquired knowledge: '.title(), 
-                                            style={'font-size': '18px'}
-                                        ),
-                                    ]
-                                ),
-                                html.Div(
-                                    className='education_knowledge_container',
-                                    children=[
-                                        html.P(
-                                            children='•  ' + knowledge.title(),
-                                            style={ 'white-space': 'nowrap'}
-                                        )
-                                        for knowledge in data_education[education_element]['knowledge']
-                                    ]
-                                )
-                            ]
-                        ),
-                    ]
-                )
-                for education_element in data_education
-            ],
-        )
+education = [
+    html.P(
+        'Education',
+        className='category_skills'
+    ),
+    html.Div(
+        id='education_container',
+        children=[
+            html.Div(
+                style={'display': 'flex', 'flex-direction': 'column', 'gap': '40px'},
+                children=[
+                    html.Div(
+                        className='education_element',
+                        children=[
+                            html.Div(
+                                className='education_col1',
+                                children=[
+                                    html.P(
+                                        education_element.title(),
+                                        style={'font-size': '22px'}
+                                    ),
+                                    html.Img(
+                                        src = img_skills + data_education[education_element]["img"],
+                                        className='education_img'
+                                    ),
+                                    html.P(
+                                        data_education[education_element]['title'].title(),
+                                        style={'font-size': '18px'}
+                                    ),
+                                    html.P(
+                                        [
+                                            data_education[education_element]['years'][0],
+                                            ' - ',
+                                            data_education[education_element]['years'][1].title()
+                                        ],
+                                        style={'font-size': '13px'}
+                                    )
+                                ]
+                            ),
+                            html.Div(
+                                className='education_col2',
+                                children=[
+                                    html.Div(
+                                        style={'width': '100%', 'height': '100%', 'display': 'flex', 'justify-content': 'center', 'align-items': 'center',},
+                                        children=[
+                                            html.P(
+                                                'acquired knowledge: '.title(), 
+                                                style={'font-size': '18px'}
+                                            ),
+                                        ]
+                                    ),
+                                    html.Div(
+                                        className='education_knowledge_container',
+                                        children=[
+                                            html.P(
+                                                children='•  ' + knowledge.title(),
+                                                style={ 'white-space': 'nowrap'}
+                                            )
+                                            for knowledge in data_education[education_element]['knowledge']
+                                        ]
+                                    )
+                                ]
+                            ),
+                        ]
+                    )
+                    for education_element in data_education
+                ],
+            )
+        ]
+    )
     ]
-)
-# ----------------------------------------------------------------------------------------------------------------------------------
 
-language = html.Div(
+# ----------------------------------------------------------------------------------------------------------------------------------
+data_language = {
+    "english": {
+        "img" : "english.png",
+        "nivel" : "B1",
+        "porcent" : 55,
+    },
+    "spanish": {
+        "img": "spanish.png",
+        "nivel": "native",
+        "porcent": 100,
+    },
+}
+
+language = [
+    html.P(
+        'Languages',
+        className='category_skills'
+    ),
+    html.Div(
     id='language_container',
     children=[
-        html.P(
-            'Languages',
-            className='category_skills'
-        ),
         html.Div(
+            className='language_element',
             children=[
-                
+                html.Div(
+                    className='language_col1',
+                    children=[
+                        html.Img(
+                            src= img_skills + data_language[language]['img'],
+                            className='language_img'
+                        ),
+                        html.P(
+                            language.title()
+                        )
+                    ]
+                ),
+                html.Div(
+                    className='language_col2',
+                    children=[
+                        html.P(data_language[language]['nivel'].title()),
+                        html.Div(
+                            style={
+                                'width': '200px', 'height': '10px', 'border-radius': '5px',
+                                'border': '0.1px solid rgba(173, 171, 171, 0.447)', 
+                            },
+                            children=[
+                                html.Div(
+                                    style={
+                                        'background': 'white', 'border-radius': '5px',
+                                        'width' : f'{data_language[language]['porcent']}%', 'height': '100%',
+                                    }
+                                )
+                            ]
+                        ),
+                        html.P(str(data_language[language]['porcent']) + '%')
+                    ]
+                )
             ]
         )
+        for language in data_language
     ]
+    )
+]
+
+# ----------------------------------------------------------------------------------------------------------------------------------
+data_tools = {
     
-)
+}
 
 
 # ----------------------------------------------------------------------------------------------------------------------------------
+
 
 layout = html.Div(
     id='skills_cotainer',
     children=[
         html.Link(rel='stylesheet', href='assets/css/skills.css'),
-        education,
-        language,
+        *education,
+        *language,
     ]
 )

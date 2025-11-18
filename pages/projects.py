@@ -60,7 +60,7 @@ project_data = [
         'description': 'A basic calculator developed during my initial learning of web development fundamentals.',
         'url': 'https://cristian-arboleda.github.io/calculator/',
         'img': 'basic_calculator.png',
-        'tools': ['html', 'css', 'js', 'git'],
+        'tools': ['html', 'css', 'javascripts', 'git'],
     }
 ]
 

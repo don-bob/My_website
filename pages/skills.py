@@ -3,7 +3,7 @@ from dash import register_page, html
 register_page(__name__)
 
 img_skills = 'assets/images/skills/'
-
+img_tools = 'assets/images/tools/'
 
 # ----------------------------------------------------------------------------------------------------------------------------------
 data_education= {
@@ -117,7 +117,7 @@ education = [
                                         children=[
                                             html.P(
                                                 children='•  ' + knowledge.title(),
-                                                style={ 'white-space': 'nowrap'}
+                                                style={ 'white-space': 'nowrap', 'font-size': '15px'}
                                             )
                                             for knowledge in data_education[education_element]['knowledge']
                                         ]
@@ -176,13 +176,13 @@ language = [
                         html.P(data_language[language]['nivel'].title()),
                         html.Div(
                             style={
-                                'width': '200px', 'height': '10px', 'border-radius': '5px',
+                                'width': '200px', 'height': '10px', 'border-radius': '3px',
                                 'border': '0.1px solid rgba(173, 171, 171, 0.447)', 
                             },
                             children=[
                                 html.Div(
                                     style={
-                                        'background': 'white', 'border-radius': '5px',
+                                        'background': 'white', 'border-radius': '3px',
                                         'width' : f'{data_language[language]['porcent']}%', 'height': '100%',
                                     }
                                 )
@@ -199,19 +199,47 @@ language = [
 ]
 
 # ----------------------------------------------------------------------------------------------------------------------------------
-data_tools = {
-    
+data_languages_tools = {
+    "python", "postgresql", "git", "github", 
+    "dash", "excel", "power_bi", "rstudio", 
+    "html", "css", "javascripts", 
+    "selenium", "visual_studio_code",
+    'virtual_machine', 'linux'
 }
 
-
+language_tools = [
+    html.P(
+        'languages and tools'.title(),
+        className='category_skills'
+    ),
+    html.Div(
+        id='languages_tools_container',
+        children=[
+            html.Div(
+                className='languages_tools_element',
+                children=[
+                    html.Img(
+                        src= img_tools + language_tool + '.png',
+                        className='languages_tools_img'
+                    ),
+                    html.P(
+                        language_tool.replace('_', ' ').title(),
+                    )
+                ]
+            )
+            for language_tool in data_languages_tools
+        ]
+    )
+]
 # ----------------------------------------------------------------------------------------------------------------------------------
 
 
 layout = html.Div(
-    id='skills_cotainer',
+    id='skills_container',
     children=[
         html.Link(rel='stylesheet', href='assets/css/skills.css'),
         *education,
         *language,
+        *language_tools
     ]
 )

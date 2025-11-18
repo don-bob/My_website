@@ -1,3 +1,10 @@
+#skills_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .category_skills{
     text-align: center;
     font-size: 25px;
@@ -6,6 +13,7 @@
     margin-bottom: 20px;
     border-bottom: 1px solid white;
     padding-bottom: 20px;
+    width: 100%;
 }
 
 #education_container{
@@ -86,6 +94,34 @@
   font-size: 15px;
 }
 
+/* --------------------------------------------------------------------------------------------------------------------------- */
+#languages_tools_container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  justify-content: center;
+}
+.languages_tools_element{
+  width: 135px;
+  height: 125px;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(96, 97, 106);
+  overflow-x: auto;
+  white-space: nowrap
+}
+.languages_tools_img{
+  width: 60px;
+  height: 65px;
+  background: rgb(28, 28, 42);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
 

@@ -13,7 +13,7 @@ presentation = html.Div(
                 html.Div(
                     className='body_presentation',
                     children=[
-                        html.P("I am a data analysis professional with a background in statistics and hands-on experience in Python. I design and develop interactive dashboards using Dash, automate repetitive tasks with Selenium, and perform web scraping to collect relevant data.",),
+                        html.P("I am a data analysis with a background in statistics and hands-on experience in Python. I design and develop interactive dashboards using Dash, automate repetitive tasks with Selenium, and perform web scraping to collect relevant data.",),
                         html.P("From this information, I carry out rigorous analyses in Python to transform raw data into actionable insights that support decision-making. In addition, I apply machine learning techniques to develop predictive and classification models, validate their performance, and uncover patterns that enhance automated solutions."),
                         html.P("I am constantly updating my skills and enjoy tackling real-world problems with evidence-based solutions.")
                     ]

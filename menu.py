@@ -7,7 +7,7 @@ sections = html.Nav(id='container_section', children=[
     ],
     html.A(
         children='Contact', 
-        href='https://cristianarboleda.onrender.com/', 
+        href='https://crist-arboleda.onrender.com/', 
         className='link_section',
         target='_blank',
     )

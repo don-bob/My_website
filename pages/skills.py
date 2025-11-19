@@ -25,7 +25,7 @@ data_education= {
     },        
     "platzi" : {
         "img": "platzi.png",
-        "title": "Ciencia de datos", 
+        "title": "data science", 
         "years": ['2023', '2024'],
         "knowledge": [
             'Introducción a la Terminal y Línea de Comandos', 
@@ -39,9 +39,9 @@ data_education= {
             'PostgreSQL Aplicado a Ciencia de Datos'
         ]
     },
-    "Autodidacta" : {
+    "autodidact" : {
         "img": "self-taught.png",
-        "title": "Ciencia de datos", 
+        "title": "data science", 
         "years": ['2023', 'present'],
         "knowledge": [
             'Object-Oriented Programming (OOP)',

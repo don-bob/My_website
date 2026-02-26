@@ -7,6 +7,13 @@ url_tools = 'assets/images/tools/'
 
 project_data = [
     {
+        'title': 'Dashboard in Excel',
+        'description': 'A professional dashboard built in Excel that integrates pivot tables and data slicers, enabling efficient data analysis and supporting data-driven decision-making.',
+        'url': 'https://1drv.ms/x/c/8C9D56D7D475648C/IQASolMq49m5TLYU5-U27omoAYDpPm3mSnYwGOI_XhaC5ew?e=pXHOyt',
+        'img': 'dashboard in excel.png',
+        'tools': ['excel'],
+    },
+    {
         'title': 'Evolution of the Minimum Wage Over Time', 
         'description': 'Explore how the minimum wage has changed in each country around the world over time, with values expressed in local currency and in US dollars to facilitate global comparison.', 
         'url': 'https://data-in-time.onrender.com/', 
@@ -51,7 +58,7 @@ project_data = [
     {
         'title': 'link_in_bio_cristian',
         'description': 'My pesonal web page where you can find all my contact links.',
-        'url': 'https://cristianarboleda.onrender.com',
+        'url': 'https://crist-arboleda.onrender.com/',
         'img': 'link_in_bio_cristian.png',
         'tools': ['python', 'css', 'html', 'dash', 'postgresql'],
     },
